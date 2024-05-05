@@ -33,15 +33,40 @@
         }
         section {
             padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
         }
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
             width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -51,24 +76,42 @@
     </header>
     <nav>
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <section>
+    <section id="about">
         <h2>About Us</h2>
-        <p>This is a brief description of our company or organization.</p>
+        <p>This is a brief description of our company or organization. You can scroll down to view more content.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
     </section>
-    <section>
+    <section id="services">
         <h2>Our Services</h2>
         <ul>
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
+            <li>Service 1: Description of Service 1</li>
+            <li>Service 2: Description of Service 2</li>
+            <li>Service 3: Description of Service 3</li>
         </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>You can contact us at contact@example.com or through the form below:</p>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
     </section>
     <footer>
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
